@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leadership Development Self-Evaluation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-3xl">
+    <h1 class="text-2xl font-bold text-gray-800 mb-6 text-center">Final Self-Evaluation – Leadership Development Check-In</h1>
+    <p class="text-gray-600 mb-6">This self-evaluation is your opportunity to pause, reflect, and take stock of your growth throughout this leadership journey. Think honestly about how you've developed in each area, the habits you've strengthened, and where you’d like to keep growing.</p>
+    <form id="leadershipEvaluationForm" class="space-y-8">
+      <!-- Section 1: Self-Awareness & Mindset -->
+      <div class="space-y-4">
+        <h2 class="text-xl font-semibold text-gray-800">🧠 Section 1: Self-Awareness & Mindset</h2>
+        <div>
+          <label for="selfAwareness" class="block text-sm font-medium text-gray-700">1. How would you describe your current level of self-awareness? <span class="text-gray-500">(Consider: How in tune are you with your thoughts, emotions, triggers, and behaviors?)</span></label>
+          <textarea id="selfAwareness" name="selfAwareness" rows="4" required
+                    class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+        </div>
+        <div>
+          <label for="mindsetShift" class="block text-sm font-medium text-gray-700">2. How has your mindset shifted during this course? <span class="text-gray-500">(Think about fixed vs growth mindset. What has changed in how you view challenges, feedback, or failure?)</span></label>
+          <textarea id="mindsetShift" name="mindsetShift" rows="4" required
+                    class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+        </div>
+      </div>
+
+      <!-- Section 2: Reactions vs. Responses -->
+      <div class="space-y-4">
+        <h2 class="text-xl font-semibold text-gray-800">🔥 Section 2: Reactions vs. Responses</h2>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">3. When faced with stress or conflict, are you more reactive or responsive now?</label>
+          <div class="mt-2 space-y-2">
+            <div>
+              <input type="radio" id="mostlyReactive" name="reactVsRespond" value="Mostly reactive" required
+                     class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+              <label for="mostlyReactive" class="ml-2 text-sm text-gray-600">Mostly reactive</label>
+            </div>
+            <div>
+              <input type="radio" id="sometimesBoth" name="reactVsRespond" value="Sometimes reactive, sometimes responsive"
+                     class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+              <label for="sometimesBoth" class="ml-2 text-sm text-gray-600">Sometimes reactive, sometimes responsive</label>
+            </div>
+            <div>
+              <input type="radio" id="mostlyResponsive" name="reactVsRespond" value="Mostly responsive"
+                     class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+              <label for="mostlyResponsive" class="ml-2 text-sm text-gray-600">Mostly responsive</label>
+            </div>
+            <div>
+              <input type="radio" id="highlyIntentional" name="reactVsRespond" value="I’ve become highly intentional in my responses"
+                     class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+              <label for="highlyIntentional" class="ml-2 text-sm text-gray-600">I’ve become highly intentional in my responses</label>
+            </div>
+          </div>
+        </div>
+        <div>
+          <label for="pauseExample" class="block text-sm font-medium text-gray-700">4. Share an example of when you paused to respond instead of react.</label>
+          <textarea id="pauseExample" name="pauseExample" rows="4" required
+                    class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+        </div>
+      </div>
+
+      <!-- Section 3: Habits of Strong Leaders -->
+      <div class="space-y-4">
+        <h2 class="text-xl font-semibold text-gray-800">💪 Section 3: Habits of Strong Leaders</h2>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">5. Which new leadership habits have you developed or strengthened?</label>
+          <div class="mt-2 space-y-2">
+            <div>
+              <input type="checkbox" id="selfReflection" name="leadershipHabits" value="Regular self-reflection"
+                     class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+              <label for="selfReflection" class="ml-2 text-sm text-gray-600">Regular self-reflection</label>
+            </div>
+            <div>
+              <input type="checkbox" id="intentionalComm" name="leadershipHabits" value="Intentional communication"
+                     class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+              <label for="intentionalComm" class="ml-2 text-sm text-gray-600">Intentional communication</label>
+            </div>
+            <div>
+              <input type="checkbox" id="listenFirst" name="leadershipHabits" value="Listening before responding"
+                     class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+              <label for="listenFirst" class="ml-2 text-sm text-gray-600">Listening before responding</label>
+            </div>
+            <div>
+              <input type="checkbox" id="seekFeedback" name="leadershipHabits" value="Seeking feedback"
+                     class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+              <label for="seekFeedback" class="ml-2 text-sm text-gray-600">Seeking feedback</label>
+            </div>
+            <div>
+              <input type="checkbox" id="delegate" name="leadershipHabits" value="Delegating more effectively"
+                     class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+              <label for="delegate" class="ml-2 text-sm text-gray-600">Delegating more effectively</label>
+            </div>
+            <div>
+              <input type="checkbox" id="empathy" name="leadershipHabits" value="Practicing empathy"
+                     class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+              <label for="empathy" class="ml-2 text-sm text-gray-600">Practicing empathy</label>
+            </div>
+            <div>
+              <input type="checkbox" id="clarity" name="leadershipHabits" value="Prioritizing clarity over chaos"
+                     class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+              <label for="clarity" class="ml-2 text-sm text-gray-600">Prioritizing clarity over chaos</label>
+            </div>
+            <div class="flex items-center">
+              <input type="checkbox" id="otherHabit" name="leadershipHabits" value="Other"
+                     class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+              <label for="otherHabit" class="ml-2 text-sm text-gray-600">Other:</label>
+              <input type="text" id="otherHabitText" name="otherHabitText"
+                     class="ml-2 w-1/2 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+            </div>
+          </div>
+        </div>
+        <div>
+          <label for="habitImpact" class="block text-sm font-medium text-gray-700">6. Describe how one of these habits has impacted your leadership.</label>
+          <textarea id="habitImpact" name="habitImpact" rows="4" required
+                    class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+        </div>
+      </div>
+
+      <!-- Section 4: Decision-Making & Clarity -->
+      <div class="space-y-4">
+        <h2 class="text-xl font-semibold text-gray-800">🔍 Section 4: Decision-Making & Clarity</h2>
+        <div>
+          <label for="decisionMaking" class="block text-sm font-medium text-gray-700">7. How has your decision-making style evolved through the course? <span class="text-gray-500">(Consider: Are you more data-driven? Collaborative? Confident in ambiguity?)</span></label>
+          <textarea id="decisionMaking" name="decisionMaking" rows="4" required
+                    class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+        </div>
+        <div>
+          <label for="manageChaos" class="block text-sm font-medium text-gray-700">8. How do you now manage chaos and create clarity—for yourself or your team?</label>
+          <textarea id="manageChaos" name="manageChaos" rows="4" required
+                    class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+        </div>
+      </div>
+
+      <!-- Section 5: Growth Planning -->
+      <div class="space-y-4">
+        <h2 class="text-xl font-semibold text-gray-800">🎯 Section 5: Growth Planning – Set Your Leadership Goals</h2>
+        <div>
+          <label for="growthArea" class="block text-sm font-medium text-gray-700">9. What is one key area you want to continue growing in as a leader?</label>
+          <input type="text" id="growthArea" name="growthArea" required
+                 class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+        </div>
+        <div>
+          <label for="growthPlan" class="block text-sm font-medium text-gray-700">10. What specific habits, practices, or learning will help you grow in that area?</label>
+          <textarea id="growthPlan" name="growthPlan" rows="4" required
+                    class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+        </div>
+        <div>
+          <label for="successMeasure" class="block text-sm font-medium text-gray-700">11. In 6 months, how will you know you’ve made progress? What will success look like?</label>
+          <textarea id="successMeasure" name="successMeasure" rows="4" required
+                    class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+        </div>
+      </div>
+
+      <!-- Optional Feedback -->
+      <div class="space-y-4">
+        <h2 class="text-xl font-semibold text-gray-800">🗣️ Optional Feedback</h2>
+        <div>
+          <label for="courseImpact" class="block text-sm font-medium text-gray-700">12. What part of this course had the greatest impact on you—and why?</label>
+          <textarea id="courseImpact" name="courseImpact" rows="4"
+                    class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+        </div>
+        <div>
+          <label for="courseFeedback" class="block text-sm font-medium text-gray-700">13. Any suggestions or feedback for improving this course experience?</label>
+          <textarea id="courseFeedback" name="courseFeedback" rows="4"
+                    class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        Submit Evaluation
+      </button>
+    </form>
+  </div>
+  <script>
+    document.getElementById('leadershipEvaluationForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData);
+      // Handle checkboxes separately to collect all selected values
+      const habits = [];
+      document.querySelectorAll('input[name="leadershipHabits"]:checked').forEach(checkbox => {
+        habits.push(checkbox.value === 'Other' ? document.getElementById('otherHabitText').value : checkbox.value);
+      });
+      data.leadershipHabits = habits;
+      console.log('Evaluation Data:', data);
+      alert('Evaluation submitted! Check the console for data.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
