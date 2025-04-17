@@ -173,21 +173,19 @@
       </button>
     </form>
   </div>
-  <script>
-    document.getElementById('leadershipEvaluationForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const formData = new FormData(this);
-      const data = Object.fromEntries(formData);
-      // Handle checkboxes separately to collect all selected values
-      const habits = [];
-      document.querySelectorAll('input[name="leadershipHabits"]:checked').forEach(checkbox => {
-        habits.push(checkbox.value === 'Other' ? document.getElementById('otherHabitText').value : checkbox.value);
-      });
-      data.leadershipHabits = habits;
-      console.log('Evaluation Data:', data);
-      alert('Evaluation submitted! Check the console for data.');
-      this.reset();
+ <script>
+  document.getElementById('leadershipEvaluationForm').addEventListener('submit', function(event) {
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData);
+    const habits = [];
+    document.querySelectorAll('input[name="leadershipHabits"]:checked').forEach(checkbox => {
+      habits.push(checkbox.value === 'Other' ? document.getElementById('otherHabitText').value : checkbox.value);
     });
-  </script>
+    data.leadershipHabits = habits;
+    console.log('Evaluation Data:', data);
+    alert('Submitting evaluation to Formspree...');
+    // Remove event.preventDefault() to allow Formspree submission
+  });
+</script>
 </body>
 </html>
