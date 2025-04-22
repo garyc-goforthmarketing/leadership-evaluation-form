@@ -191,7 +191,9 @@
         window.location.href = 'https://garyc-goforthmarketing.github.io/leadership-self-evaluation-form/thank-you.html';
       } catch (error) {
         console.error('Submission failed:', error);
-        alert('There was an error submitting the form. Please try again.');
+        alert('There was an error submitting the form. Please try again. Check the console for details.');
+        // Log additional error details
+        console.log('Error Details:', error.message);
       }
     }
     form.addEventListener('submit', handleSubmit);
