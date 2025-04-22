@@ -172,17 +172,18 @@
 
       <!-- Honeypot to reduce spam -->
       <input type="text" name="_gotcha" style="display:none" />
-      <!-- Redirect after submission -->
-      <input type="hidden" name="_next" value="https://garyc-goforthmarketing.github.io/leadership-self-evaluation-form/thank-you.html">
       <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
         Submit Evaluation
       </button>
     </form>
   </div>
   <script>
-    document.getElementById('leadershipEvaluationForm').addEventListener('submit', function(event) {
-      // Log data for debugging
-      const formData = new FormData(this);
+    const form = document.getElementById('leadershipEvaluationForm');
+    async function handleSubmit(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      // Log data for debugging (preserving your existing functionality)
+      const formData = new FormData(form);
       const data = Object.fromEntries(formData);
       const habits = [];
       document.querySelectorAll('input[name="Section3_Q5_LeadershipHabits[]"]:checked').forEach(checkbox => {
@@ -190,8 +191,27 @@
       });
       data.Section3_Q5_LeadershipHabits = habits;
       console.log('Evaluation Data:', data);
-      // Do not prevent default to allow Formspree submission
-    });
+
+      try {
+        // Submit form data to Formspree
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          // Redirect to thank-you page after successful submission
+          window.location.href = '/leadership-self-evaluation-form/thank-you.html';
+        } else {
+          throw new Error('Formspree submission failed');
+        }
+      } catch (error) {
+        console.error('Submission failed:', error);
+        alert('There was an error submitting the form. Please try again.');
+      }
+    }
+    form.addEventListener('submit', handleSubmit);
   </script>
 </body>
 </html>
